@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ConverCtoTtoFOnealN
+namespace OptionalOneal
 {
-    static class Program
+    static class Optional
     {
         /// <summary>
         /// The main entry point for the application.
@@ -16,7 +16,7 @@ namespace ConverCtoTtoFOnealN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmConvertCtoF());
+            Application.Run(new frmOptional());
         }
     }
 }

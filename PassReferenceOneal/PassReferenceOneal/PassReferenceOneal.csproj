@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{787E6562-8DE3-4C79-8D64-45ACDD3F9104}</ProjectGuid>
+    <ProjectGuid>{16FE7A56-EA32-4E03-83B7-177CDD95FE78}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ConverCtoTtoFOnealN</RootNamespace>
-    <AssemblyName>ConverCtoTtoFOnealN</AssemblyName>
+    <RootNamespace>PassReferenceOneal</RootNamespace>
+    <AssemblyName>PassReferenceOneal</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,16 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConvertCtoFForm.cs">
+    <Compile Include="RassReferenceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConvertCtoFForm.Designer.cs">
-      <DependentUpon>ConvertCtoFForm.cs</DependentUpon>
+    <Compile Include="RassReferenceForm.Designer.cs">
+      <DependentUpon>RassReferenceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConvertCtoF.cs" />
+    <Compile Include="PassReference.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ConvertCtoFForm.resx">
-      <DependentUpon>ConvertCtoFForm.cs</DependentUpon>
+    <EmbeddedResource Include="RassReferenceForm.resx">
+      <DependentUpon>RassReferenceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
