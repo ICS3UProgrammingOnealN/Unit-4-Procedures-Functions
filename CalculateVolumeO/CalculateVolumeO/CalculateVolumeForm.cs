@@ -15,27 +15,35 @@ namespace CalculateVolumeO
         public CalculateVolumeForm()
         {
             InitializeComponent();
+            lblAnswer.Hide();
         }
-        private double CalculateVolume(double radius,double height)
+        private double CalculateVolume(double radius, double height)
         {
-            // declare local variable
-            double volume;
+            // ddclare local variable
+            double volume = 0;
 
-            // calculate the volume with the give Radius and Height
-            volume = Math.PI * Math.Pow()
+            volume = Math.PI * Math.Pow(radius, 2) * height;
+
+            // return the volume to the procedure
+            return volume;
         }
-        private void btnCalculateVolume_Click(object sender, EventArgs e)
+
+
+        private void btnCalculateVolume_Click(object sender, EventArgs e) 
         {
-            // declare local variable
-            double userRadius;
-            double userheight;
+            double radius, height, UserVolume;
 
-            // get the user height and radius
+            // convert the string to a double
+            radius = double.Parse(txtRadius.Text);
+            height = double.Parse(txtHeight.Text);
 
-            // call the function
-           
+            // call the procedure 
+            UserVolume = CalculateVolume(radius, height);
 
+            lblAnswer.Text = string.Format("(0:0.00)", UserVolume) + "cm";
 
+            // show the answer
+            lblAnswer.Show();
         }
     }
 }

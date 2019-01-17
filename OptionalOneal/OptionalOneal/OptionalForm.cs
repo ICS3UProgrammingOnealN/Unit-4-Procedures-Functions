@@ -16,18 +16,26 @@ namespace OptionalOneal
         {
             InitializeComponent();
         }
-        
 
+        private void PrintAddress (string streetaddress, string City, string Province, string PostalCode, string ApartmentNumber)
+        {
+            MessageBox.Show("your address is " + streetaddress +" "+ City +" "+ Province +" "+ PostalCode +" "+ ApartmentNumber);
+        }
+
+        private void PrintAddress(string streetaddress, string City, string Province, string PostalCode)
+        {
+            MessageBox.Show("your address is " + streetaddress + " " + City + " " + Province +" "+ PostalCode);
+        }
         private void btnEnter_Click(object sender, EventArgs e)
         {
             // declare local variables
-            string userApartmentNum, userStreetAddress, userCity, userPostalCode, UserProvince;
+            string userApartmentNum, userStreetAddress, userCity, userPostalCode, userProvince;
 
             // get names from textboxes
             userApartmentNum = this.txtApartNum.Text;
             userStreetAddress = this.txtAddress.Text;
             userCity = this.txtCity.Text;
-            UserProvince = this.txtProvince.Text;
+            userProvince = this.txtProvince.Text;
             userPostalCode = this.txtPostalCode.Text;
 
             // make the user enter Street Address
@@ -35,13 +43,28 @@ namespace OptionalOneal
             {
                 MessageBox.Show("please enter your street address");
             }
-            if (userCity == "")
+            else if (userCity == "")
             {
                 MessageBox.Show("please enter your city");
             }
-            //if (user)
-
-
+            else if (userPostalCode == "")
+            {
+                MessageBox.Show("please enter your postal code");
+            }
+            else if (userProvince == "")
+            {
+                MessageBox.Show("please enter your province");
+            }
+            // if user does not enter an apartment number, Call the procedure that accepts only four strings
+            else if (userApartmentNum == "")
+            {
+                PrintAddress(userStreetAddress, userCity, userProvince, userPostalCode);
+            }
+            // if user enters an apartment number, Call the procedure that accepts five string
+            else
+            {
+                PrintAddress(userStreetAddress, userCity, userProvince, userPostalCode, userApartmentNum);
+            }
             
         }
     }

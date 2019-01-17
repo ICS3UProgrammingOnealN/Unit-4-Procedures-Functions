@@ -33,6 +33,7 @@
             this.txtRadius = new System.Windows.Forms.TextBox();
             this.txtHeight = new System.Windows.Forms.TextBox();
             this.btnCalculateVolume = new System.Windows.Forms.Button();
+            this.lblAnswer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblRadius
@@ -70,7 +71,7 @@
             // btnCalculateVolume
             // 
             this.btnCalculateVolume.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalculateVolume.Location = new System.Drawing.Point(28, 185);
+            this.btnCalculateVolume.Location = new System.Drawing.Point(28, 146);
             this.btnCalculateVolume.Name = "btnCalculateVolume";
             this.btnCalculateVolume.Size = new System.Drawing.Size(205, 50);
             this.btnCalculateVolume.TabIndex = 4;
@@ -78,17 +79,27 @@
             this.btnCalculateVolume.UseVisualStyleBackColor = true;
             this.btnCalculateVolume.Click += new System.EventHandler(this.btnCalculateVolume_Click);
             // 
-            // Form1
+            // lblAnswer
+            // 
+            this.lblAnswer.AutoSize = true;
+            this.lblAnswer.Location = new System.Drawing.Point(56, 239);
+            this.lblAnswer.Name = "lblAnswer";
+            this.lblAnswer.Size = new System.Drawing.Size(35, 13);
+            this.lblAnswer.TabIndex = 5;
+            this.lblAnswer.Text = "label1";
+            // 
+            // CalculateVolumeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.lblAnswer);
             this.Controls.Add(this.btnCalculateVolume);
             this.Controls.Add(this.txtHeight);
             this.Controls.Add(this.txtRadius);
             this.Controls.Add(this.lblHeight);
             this.Controls.Add(this.lblRadius);
-            this.Name = "Form1";
+            this.Name = "CalculateVolumeForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -102,6 +113,7 @@
         private System.Windows.Forms.TextBox txtRadius;
         private System.Windows.Forms.TextBox txtHeight;
         private System.Windows.Forms.Button btnCalculateVolume;
+        private System.Windows.Forms.Label lblAnswer;
     }
 }
 

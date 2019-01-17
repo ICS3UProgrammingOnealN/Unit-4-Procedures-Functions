@@ -31,6 +31,7 @@
             this.lblCelsius = new System.Windows.Forms.Label();
             this.btnConvert = new System.Windows.Forms.Button();
             this.txtCelsius = new System.Windows.Forms.TextBox();
+            this.lblAnswer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCelsius
@@ -60,16 +61,28 @@
             this.txtCelsius.Size = new System.Drawing.Size(100, 20);
             this.txtCelsius.TabIndex = 2;
             // 
+            // lblAnswer
+            // 
+            this.lblAnswer.AutoSize = true;
+            this.lblAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnswer.Location = new System.Drawing.Point(360, 270);
+            this.lblAnswer.Name = "lblAnswer";
+            this.lblAnswer.Size = new System.Drawing.Size(24, 25);
+            this.lblAnswer.TabIndex = 3;
+            this.lblAnswer.Text = "?";
+            // 
             // frmConvertCtoF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(465, 314);
+            this.Controls.Add(this.lblAnswer);
             this.Controls.Add(this.txtCelsius);
             this.Controls.Add(this.btnConvert);
             this.Controls.Add(this.lblCelsius);
             this.Name = "frmConvertCtoF";
             this.Text = "ConvertCtoF";
+            this.Load += new System.EventHandler(this.frmConvertCtoF_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,6 +93,7 @@
         private System.Windows.Forms.Label lblCelsius;
         private System.Windows.Forms.Button btnConvert;
         private System.Windows.Forms.TextBox txtCelsius;
+        private System.Windows.Forms.Label lblAnswer;
     }
 }
 
